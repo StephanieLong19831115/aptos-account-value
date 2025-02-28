@@ -1,0 +1,42 @@
+{
+  "name": "aptos-account-value-api",
+  "private": true,
+  "dependencies": {
+    "@aptos-labs/ts-sdk": "catalog:",
+    "@banool/aptos-account-value": "workspace:*",
+    "@tsoa/runtime": "catalog:",
+    "express": "catalog:",
+    "swagger-ui-express": "catalog:",
+    "tsoa": "catalog:"
+  },
+  "devDependencies": {
+    "@types/express": "catalog:",
+    "@types/node": "catalog:",
+    "@types/swagger-ui-express": "catalog:",
+    "@typescript-eslint/eslint-plugin": "catalog:",
+    "@typescript-eslint/parser": "catalog:",
+    "eslint": "catalog:",
+    "eslint-config-airbnb-base": "catalog:",
+    "eslint-config-airbnb-typescript": "catalog:",
+    "eslint-config-prettier": "catalog:",
+    "eslint-config-react-app": "catalog:",
+    "eslint-plugin-import": "catalog:",
+    "ts-node": "catalog:",
+    "typescript": "catalog:"
+  },
+  "scripts": {
+    "tsoa-generate": "tsoa spec && tsoa routes",
+    "start": "ts-node src/server.ts",
+    "compile": "tsc",
+    "lint": "eslint 'src/**/*.{ts,tsx}'"
+  },
+  "eslintConfig": {
+    "extends": "react-app",
+    "rules": {
+      "@typescript-eslint/no-unused-vars": "off",
+      "no-throw-literal": "off",
+      "no-multi-str": "off",
+      "no-empty-pattern": "off"
+    }
+  }
+}
